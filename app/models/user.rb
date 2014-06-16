@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
     Micropost.where("user_id = ?", id)
   end
   
-   def following?(other_user)
+  def following?(other_user)
     relationships.find_by(followed_id: other_user.id)
   end
 
